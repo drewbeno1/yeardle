@@ -123,6 +123,12 @@ const shareScore = () => {
         letterPool.push(s.charAt(i));
       }
     }
+
+    // If all elements are green, return the mapped string immediately
+    if (temp.every(color => color === "green")) {
+      return temp.map(color => emojiMap[color]).join('');
+    }
+
     for (let i = 0; i < 4; i++) {
       if (temp[i] == "gray") {
         if (letterPool.indexOf(v.charAt(i)) != -1) {
