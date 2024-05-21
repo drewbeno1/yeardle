@@ -1,11 +1,11 @@
-import monday from './images/abe.jpeg';
+import tuesday from './images/tye.png';
 
 export default {
   images: [
     {
       day: 'Tuesday',
-      src: monday,
-      year: '1865',
+      src: tuesday,
+      year: '2007',
     },
   ],
 };
