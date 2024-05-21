@@ -116,14 +116,14 @@ const shareScore = () => {
 
     let temp = ["gray", "gray", "gray", "gray", "gray"];
     let letterPool = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       if (s.charAt(i) == v.charAt(i)) {
         temp[i] = "green";
       } else {
         letterPool.push(s.charAt(i));
       }
     }
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       if (temp[i] == "gray") {
         if (letterPool.indexOf(v.charAt(i)) != -1) {
           letterPool.splice(letterPool.indexOf(v.charAt(i)), 1)
