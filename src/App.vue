@@ -114,7 +114,7 @@ const shareScore = () => {
     let s = state.solution;
     let v = guess;
 
-    let temp = ["gray", "gray", "gray", "gray", "gray"];
+    let temp = ["gray", "gray", "gray", "gray"];
     let letterPool = [];
     for (let i = 0; i < 4; i++) {
       if (s.charAt(i) == v.charAt(i)) {
