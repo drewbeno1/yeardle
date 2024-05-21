@@ -67,6 +67,8 @@ const isOpen = ref(false)
                             <br>
                             Each guess must be a 4-number year. Press Enter to submit your guess.<br>
                             The number tiles will change color depending on the accuracy of your guess!<br>
+                            <br>
+                            Created by DBreezy, inspired by JHippy
                         </p>
                     </div>
                     <!-- footer -->
@@ -86,8 +88,8 @@ const isOpen = ref(false)
     </div>
 
     <div class="flex w-20 justify-end">
-        <button class="px-1" title="Toggle Dark Mode" disabled>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8  " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <button class="px-1 bg-white text-white" title="Toggle Dark Mode" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
