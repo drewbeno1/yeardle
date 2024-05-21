@@ -3,7 +3,7 @@ import monday from './images/abe.jpeg';
 export default {
   images: [
     {
-      day: 'Monday',
+      day: 'Tuesday',
       src: monday,
       year: '1865',
     },
