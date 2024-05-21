@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     rollupOptions: {
-      external: ['@headlessui/vue'],
+      external: ['@headlessui/vue', '@heroicons/vue/24/outline'],
     },
   },
 })
