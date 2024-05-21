@@ -3,10 +3,5 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-  build: {
-    rollupOptions: {
-      external: ['@headlessui/vue', '@heroicons/vue/24/outline'],
-    },
-  },
+  plugins: [vue()]
 })
