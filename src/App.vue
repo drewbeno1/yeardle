@@ -103,15 +103,56 @@ onMounted(() => {
   });
 })
 
-const copyScore = () => {
-  const score = state.guesses.join(' '); 
-  navigator.clipboard.writeText(score)
-    .then(() => {
-      console.log('Score copied to clipboard');
-    })
-    .catch(err => {
-      console.error('Could not copy score: ', err);
-    });
+const shareScore = () => {
+  const emojiMap = {
+    'green': '✅',
+    'yellow': '🟡',
+    'gray': '⬛',
+  };
+
+  const score = state.guesses.map(guess => {
+    let s = state.solution;
+    let v = guess;
+
+    let temp = ["gray", "gray", "gray", "gray"];
+    let letterPool = [];
+    for (let i = 0; i < 4; i++) {
+      if (s.charAt(i) == v.charAt(i)) {
+        temp[i] = "green";
+      } else {
+        letterPool.push(s.charAt(i));
+      }
+    }
+
+    // If all elements are green, return the mapped string immediately
+    if (temp.every(color => color === "green")) {
+      return temp.map(color => emojiMap[color]).join('');
+    }
+
+    for (let i = 0; i < 4; i++) {
+      if (temp[i] == "gray") {
+        if (letterPool.indexOf(v.charAt(i)) != -1) {
+          letterPool.splice(letterPool.indexOf(v.charAt(i)), 1)
+          temp[i] = "yellow";
+        }
+      }
+    }
+    return temp.map(color => emojiMap[color]).join('');
+  }).join('\n');
+
+  const shareData = {
+    title: 'Play Yeardle!',
+    text: `${score}`,
+    url: 'https://yeardle.io',
+  }
+
+  try {
+    navigator.share(shareData)
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+  } catch(err) {
+    console.error('Could not share score: ', err);
+  }
 }
 
 function resetGame() {
@@ -121,12 +162,12 @@ function resetGame() {
 
 <template>
 <div :class="{ darkbg: state.darkmode }">
-  <div class="flex flex-row px-16 h-20 items-center justify-between">
+  <div class="flex flex-row px-16 items-center justify-between">
     <Header />
   </div>
   <div class="flex flex-col h-[calc(100vh_-_7rem)] max-w-md mx-auto justify-evenly">
     <img class="max-w-[80vw] ml-11 md:ml-0 mb-4" :src="state.currentImage" alt="Sorry, I forgot to pick the images for this week!">
-    <div class="max-h-30 overflow-auto mb-4">
+    <div class="overflow-auto mb-4">
       <word-row
         v-for="(guess, i) in state.guesses"
         :key="i"
@@ -136,8 +177,8 @@ function resetGame() {
         :darkmode=state.darkmode
       />
     </div>
-    <WinPage v-if="wonGame" :copyScore="copyScore" />
-    <LosePage v-if="lostGame" :reset="resetGame" />
+    <WinPage v-if="wonGame" :shareScore="shareScore" />
+    <LosePage v-if="lostGame" :shareScore="shareScore" />
     <div>
     <!-- listen for event -->
     <simple-keyboard
