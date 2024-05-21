@@ -6,7 +6,7 @@ import { XMarkIcon } from '@heroicons/vue/24/outline'
 const open = ref(true)
 
 const props = defineProps({
-    reset: Function,
+    shareScore: Function,
 })
 </script>
 
@@ -33,7 +33,7 @@ const props = defineProps({
                   </div>
                 </div>
                 <div class="mt-5 sm:mt-6">
-                    <button type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" @click="props.reset">Share Score (Coming Soon...)</button>
+                    <button type="button" class="inline-flex w-full justify-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" @click="props.shareScore">Share Score (Coming Soon...)</button>
                 </div>
               </DialogPanel>
             </TransitionChild>

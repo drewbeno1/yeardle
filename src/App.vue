@@ -178,7 +178,7 @@ function resetGame() {
       />
     </div>
     <WinPage v-if="wonGame" :shareScore="shareScore" />
-    <LosePage v-if="lostGame" :reset="resetGame" />
+    <LosePage v-if="lostGame" :shareScore="shareScore" />
     <div>
     <!-- listen for event -->
     <simple-keyboard
