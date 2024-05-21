@@ -103,15 +103,51 @@ onMounted(() => {
   });
 })
 
-const copyScore = () => {
-  const score = state.guesses.join(' '); 
-  navigator.clipboard.writeText(score)
-    .then(() => {
-      console.log('Score copied to clipboard');
-    })
-    .catch(err => {
-      console.error('Could not copy score: ', err);
-    });
+const shareScore = () => {
+  const emojiMap = {
+    'green': '✅',
+    'yellow': '🟡',
+    'gray': '⬛',
+  };
+
+  const score = state.guesses.map(guess => {
+    let s = state.solution;
+    let v = guess;
+
+    let temp = ["gray", "gray", "gray", "gray", "gray"];
+    let letterPool = [];
+    for (let i = 0; i < 5; i++) {
+      if (s.charAt(i) == v.charAt(i)) {
+        temp[i] = "green";
+      } else {
+        letterPool.push(s.charAt(i));
+      }
+    }
+    for (let i = 0; i < 5; i++) {
+      if (temp[i] == "gray") {
+        if (letterPool.indexOf(v.charAt(i)) != -1) {
+          letterPool.splice(letterPool.indexOf(v.charAt(i)), 1)
+          temp[i] = "yellow";
+        }
+      }
+    }
+    return temp.map(color => emojiMap[color]).join('');
+  }).join('\n');
+
+  const wonMessage = wonGame.value ? "I won!" : "I lost!";
+  const shareData = {
+    title: 'My Game Score',
+    text: `${score}\n${wonMessage}`,
+    url: 'yeardle.io',
+  }
+
+  try {
+    navigator.share(shareData)
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+  } catch(err) {
+    console.error('Could not share score: ', err);
+  }
 }
 
 function resetGame() {
@@ -136,7 +172,7 @@ function resetGame() {
         :darkmode=state.darkmode
       />
     </div>
-    <WinPage v-if="wonGame" :copyScore="copyScore" />
+    <WinPage v-if="wonGame" :shareScore="shareScore" />
     <LosePage v-if="lostGame" :reset="resetGame" />
     <div>
     <!-- listen for event -->
