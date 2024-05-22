@@ -12,6 +12,7 @@
     "@heroicons/vue": "^2.1.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
+    "posthog-js": "^1.132.2",
     "simple-keyboard": "^3.4.109",
     "vue": "^3.2.25"
   },
