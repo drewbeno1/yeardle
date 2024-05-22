@@ -1,5 +1,5 @@
 import monday from './queue/tye.png';
-import tuesday from './images/tye.png';
+import tuesday from './queue/tye.png';
 import wednesday from './images/David & Joi.jpeg';
 import thursday from './images/granddad.jpeg';
 import friday from './images/papa.png';
