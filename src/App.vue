@@ -1,7 +1,7 @@
 <script setup>
 import posthog from 'posthog-js'
-let posthog = process.env.POSTHOG;
-posthog.init(posthog, { api_host: 'https://app.posthog.com' })
+let posthogKey = process.env.POSTHOG;
+posthog.init(posthogKey, { api_host: 'https://app.posthog.com' })
 
 import SimpleKeyboard from "./components/SimpleKeyboard.vue";
 import WordRow from "./components/WordRow.vue";
