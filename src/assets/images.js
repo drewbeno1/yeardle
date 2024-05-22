@@ -1,14 +1,18 @@
-// import monday from 
-import tuesday from './images/tye.png';
+import monday from './queue/tye.png';
+import tuesday from './queue/tye.png';
 import wednesday from './images/David & Joi.jpeg';
-import thursday from './images/OCALAFAMILY.jpeg';
+import thursday from './images/granddad.jpeg';
 import friday from './images/papa.png';
-import saturday from './images/granddad.jpeg';
+import saturday from './images/OCALAFAMILY.jpeg';
 import sunday from './images/Benos.jpeg';
 
 
 export default {
   images: [
+    { day: 'Monday',
+      src: monday,
+      year: '2009',
+    },
     {
       day: 'Tuesday',
       src: tuesday,
@@ -22,7 +26,7 @@ export default {
     {
       day: 'Thursday',
       src: thursday,
-      year: '1992',
+      year: '1978',
     },
     {
       day: 'Friday',
@@ -32,7 +36,7 @@ export default {
     {
       day: 'Saturday',
       src: saturday,
-      year: '1978',
+      year: '1992',
     },
     {
       day: 'Sunday',
