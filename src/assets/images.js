@@ -1,6 +1,6 @@
 // import monday from 
-// import tuesday from './images/tye.png';
-import tuesday from './images/David & Joi.jpeg';
+import tuesday from './images/tye.png';
+import wednesday from './images/David & Joi.jpeg';
 import thursday from './images/OCALAFAMILY.jpeg';
 import friday from './images/papa.png';
 import saturday from './images/granddad.jpeg';
@@ -14,11 +14,11 @@ export default {
       src: tuesday,
       year: '2007',
     },
-    // {
-    //   day: 'Wednesday',
-    //   src: wednesday,
-    //   year: '1998',
-    // },
+    {
+      day: 'Wednesday',
+      src: wednesday,
+      year: '1998',
+    },
     {
       day: 'Thursday',
       src: thursday,
