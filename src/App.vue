@@ -141,7 +141,8 @@ const shareScore = () => {
   }).join('\n');
 
   let lostMessage = '';
-  if (state.lostGame.value) {
+  // This isnt working
+  if (state.lostGame) {
     lostMessage = '🟥 Captain Butthole! 🟥';
   }
   const shareData = {
