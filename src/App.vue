@@ -161,14 +161,12 @@ function resetGame() {
 </script>
 
 <template>
-<div :class="{ darkbg: state.darkmode }">
+<div :class="{ darkbg: state.darkmode }" class="flex flex-col justify-center">
   <div class="flex flex-row px-16 items-center justify-between">
     <Header />
   </div>
   <div class="flex flex-col max-w-md mx-auto justify-evenly">
-    <div class="ml-20">
-    <img class="max-h-[20vw] max-w-[18vw] mb-4" :src="state.currentImage" alt="Sorry, I forgot to pick the images for this week!">
-    </div>
+    <img class="max-w-[80vw] mb-4" :src="state.currentImage" alt="Sorry, I forgot to pick the images for this week!">
     <div class="overflow-auto mb-4">
       <word-row
         v-for="(guess, i) in state.guesses"
