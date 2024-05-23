@@ -141,8 +141,8 @@ const shareScore = () => {
   }).join('\n');
 
   let lostMessage = '';
-  if (state.lostGame) {
-    lostMessage = 'Captain Butthole! 🟥';
+  if (state.lostGame.value) {
+    lostMessage = '🟥 Captain Butthole! 🟥';
   }
   const shareData = {
     title: 'Play Yeardle!',
@@ -157,10 +157,6 @@ const shareScore = () => {
   } catch(err) {
     console.error('Could not share score: ', err);
   }
-}
-
-function resetGame() {
-  document.location.reload(true)
 }
 </script>
 
