@@ -4,7 +4,7 @@ import wednesday from './images/David & Joi.jpeg';
 import thursday from './images/granddad.jpeg';
 import friday from './images/papa.png';
 import saturday from './images/OCALAFAMILY.jpeg';
-import sunday from './images/Benos.jpeg';
+import sunday from './images/pahokee1941.png';
 
 
 export default {
@@ -41,7 +41,7 @@ export default {
     {
       day: 'Sunday',
       src: sunday,
-      year: '2002',
+      year: '1941',
     }
   ],
 };
