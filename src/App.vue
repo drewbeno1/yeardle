@@ -1,8 +1,4 @@
 <script setup>
-import posthog from 'posthog-js'
-let posthogKey = process.env.POSTHOG;
-posthog.init(posthogKey, { api_host: 'https://app.posthog.com' })
-
 import SimpleKeyboard from "./components/SimpleKeyboard.vue";
 import WordRow from "./components/WordRow.vue";
 import { reactive, ref, onMounted, computed } from "vue";
