@@ -1,47 +1,47 @@
-import monday from './queue/tye.png';
-import tuesday from './queue/tye.png';
-import wednesday from './images/David & Joi.jpeg';
-import thursday from './images/granddad.jpeg';
-import friday from './images/papa.png';
-import saturday from './images/OCALAFAMILY.jpeg';
-import sunday from './images/Benos.jpeg';
+import monday from './images/pahokee.png';
+import tuesday from './images/johnny2021.png';
+import wednesday from './images/drew2011.png';
+import thursday from './images/tye2020.png';
+import friday from './images/papacrane2011.png';
+import saturday from './images/carly2017.png';
+import sunday from './images/Hoover1937.png';
 
 
 export default {
   images: [
     { day: 'Monday',
       src: monday,
-      year: '2009',
+      year: '1941',
     },
     {
       day: 'Tuesday',
       src: tuesday,
-      year: '2007',
+      year: '2021',
     },
     {
       day: 'Wednesday',
       src: wednesday,
-      year: '1998',
+      year: '2011',
     },
     {
       day: 'Thursday',
       src: thursday,
-      year: '1978',
+      year: '2020',
     },
     {
       day: 'Friday',
       src: friday,
-      year: '1992',
+      year: '2011',
     },
     {
       day: 'Saturday',
       src: saturday,
-      year: '1992',
+      year: '2017',
     },
     {
       day: 'Sunday',
       src: sunday,
-      year: '2002',
+      year: '1937',
     }
   ],
 };
