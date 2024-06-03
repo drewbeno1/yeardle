@@ -4,7 +4,7 @@ import wednesday from './images/woofters2012.png';
 import thursday from './images/santapapa2021.png';
 import friday from './images/carly2001.png';
 import saturday from './images/ava2013.png';
-import sunday from './images/jena2013.png';
+import sunday from './images/Jena2013.png';
 
 
 export default {
