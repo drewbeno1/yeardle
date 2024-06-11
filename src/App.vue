@@ -140,9 +140,11 @@ const shareScore = () => {
     return temp.map(color => emojiMap[color]).join('');
   }).join('\n');
 
+  const loseMessage = lostGame.value ? '❌ Captain Butthole ❌' : '';
+
   const shareData = {
     title: 'Play Yeardle!',
-    text: `${score}`,
+    text: `${score} \n ${loseMessage}`,
     url: 'https://yeardle.io',
   }
 
