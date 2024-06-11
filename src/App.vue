@@ -140,7 +140,7 @@ const shareScore = () => {
     return temp.map(color => emojiMap[color]).join('');
   }).join('\n');
 
-  const message = lostGame.value ? "I'm Captain Butthole ❌" : "I won! 🎉";
+  const message = lostGame.value ? "Captain Butthole ❌" : "Winner! 🎉";
 
   const shareData = {
     title: 'Play Yeardle!',
