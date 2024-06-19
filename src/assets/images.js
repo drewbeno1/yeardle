@@ -1,10 +1,10 @@
-import monday from './images/drew2013.jpeg';
+import monday from './images/mia2013.jpg';
 import tuesday from './images/1954.jpeg';
-import wednesday from './images/iwo1945.png';
-import thursday from './images/tyeweird2012.png';
-import friday from './images/1968.jpeg';
-import saturday from './images/2004.jpeg';
-import sunday from './images/md1950.jpeg';
+import wednesday from './images/moon1969.png';
+import thursday from './images/mia2013.jpg';
+import friday from './images/ruthbaby2009.png';
+import saturday from './images/tye2013.png';
+import sunday from './images/cousins2011.png';
 
 
 export default {
@@ -21,27 +21,27 @@ export default {
     {
       day: 'Wednesday',
       src: wednesday,
-      year: '1945',
+      year: '1969',
     },
     {
       day: 'Thursday',
       src: thursday,
-      year: '2012',
+      year: '2013',
     },
     {
       day: 'Friday',
       src: friday,
-      year: '1968',
+      year: '2009'
     },
     {
       day: 'Saturday',
       src: saturday,
-      year: '2004',
+      year: '2013',
     },
     {
       day: 'Sunday',
       src: sunday,
-      year: '1950',
+      year: '2011',
     }
   ],
 };
