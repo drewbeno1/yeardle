@@ -1,9 +1,9 @@
-import monday from './images/2013.JPG';
-import tuesday from './images/20132.JPG';
-import wednesday from './images/2010.JPG';
-import thursday from './images/20133.JPG';
-import friday from './images/2020.JPG';
-import saturday from './images/2023.JPG';
+import monday from './images/2013.jpg';
+import tuesday from './images/20132.jpg';
+import wednesday from './images/2010.jpg';
+import thursday from './images/20133.jpg';
+import friday from './images/2020.jpg';
+import saturday from './images/2023.png';
 import sunday from './images/2011.jpg';
 
 
